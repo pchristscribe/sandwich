@@ -6,7 +6,7 @@ import random
 ingredients = {
     'meats': ['corned beef', 'pastrami', 'meatballs', 'capicola', 'beyond burger', 'roast pork'],
     'cheeses': ['american', 'swiss', 'provolone', 'cheddar', 'mozzarella', 'muenster'],
-    'toppings': ['lettuce', 'roma tomato', 'onions', 'italian long hots', 'pickles', 'brocolli rabe']
+    'toppings': ['lettuce', 'roma tomato', 'onions', 'italian long hots', 'pickles', 'broccoli rabe']
 }
 
 class SandwichappView(View):
@@ -49,4 +49,4 @@ class MenuGeneratorView(View):
             context={
                 "meats": ingredients["meats"],
                 "cheeses": ingredients["cheeses"],
-                "toppings": ingredients["toppings"],})
+                "toppings": ingredients["toppings"]})
