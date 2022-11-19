@@ -38,6 +38,15 @@ class SandwichGeneratorView(View):
             sandwich = f'{selected_meat} & {selected_cheese} with {selected_toppings}'
             return render(
                 request, 
-                'sandwich_generator.html',
+                template_name ='sandwich_generator.html',
                 context = { 'sandwich' : sandwich}
                 )
+class MenuGeneratorView(View):
+    def get(self, request):
+        return render(
+            request, 
+            template_name = "menu_generator.html",
+            context={
+                "meats": ingredients["meats"],
+                "cheeses": ingredients["cheeses"],
+                "toppings": ingredients["toppings"],})
